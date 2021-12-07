@@ -5,12 +5,21 @@
     padding: 0;
     box-sizing: border-box;
 }
-
+:root{
+    --text-shadow:#888888 0px 10px 15px -3px;
+    --whites-shade:#f7f8fa;
+    --box-shadow:#888888 5px 10px 18px 0px;
+    --box-shadow-hover:5px 10px 18px #3b5998;
+    --theme-color:#1ca7d0;
+    --color:#adc6fa;
+    --border-color:#e2e8f0;
+}
 body{
     font-family: 'Titillium Web', sans-serif;
     overflow-x: hidden;
     line-height: 24px;
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 .nav{
@@ -22,30 +31,32 @@ body{
     padding-left: 10vw;
     padding-right: 10vw;
     padding-bottom: 30px;
-    background-color: #f7f8fa;
+    background-color: var(--whites-shade);
 
 }
 .box{
     box-shadow: #888888 5px 10px 18px 0px;
 }
 .text-border{
-    border-color: #e2e8f0;
+    border-color: var(--color);
     border-radius: 6px;
-    box-shadow: #888888 0px 10px 15px -3px;
+    box-shadow: var(--text-shadow);
     border-width: 1px;
     border-style: solid;
 }
-.logo-svg{
-    height: 60px;
+.logo{
+    height: 50px;
     width: 60px;
+    margin-top: -9px;
 }
 .image-profile{
-    height: 500px;
-    width: 500px;
-    box-shadow: #888888 5px 10px 18px 0px;
+    max-width: 100%; 
+display: block; 
+height: auto;
+    box-shadow:var(--box-shadow);
 }
 .image-profile:hover{
-    box-shadow: 5px 10px 18px #3b5998;
+    box-shadow: var(--box-shadow-hover);
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
 }
@@ -56,9 +67,73 @@ body{
     align-content: center;
 }
 .nav-ul li{
-    margin-right: 8px;
+    margin-right: 12px;
     cursor: pointer;
 }
+.nav-ul :not(:last-child):hover{
+    border-bottom: solid 1px #1a202c;
+}
+/* Modal Style */
+.hamburger {
+    display: none;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 6;
+    height: 100%;
+    width: 100vw;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  .modal-box {
+    margin-top: 10%;
+    margin-left: 10vw;
+    margin-right: 10vw;
+   
+    background: #fff;
+    color: #1a202c;
+    border-radius: 5px;
+    display: grid;
+    place-items: center;
+  
+    padding: 50px;
+    position: relative;
+    animation: modalopen 0.7s;
+  }
+  @keyframes modalopen {
+    0% {
+       opacity: 0;
+       
+    }
+    100% {
+       opacity: 1;
+    }
+ }  
+  .closeModal {
+    position: absolute;
+    top: 0;
+    right: 0;
+    padding: 20px;
+    cursor: pointer;
+  }
+  .modal-flex {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .modal-flex ul{
+      list-style: none;
+  }
+  .modal-flex ul li{
+      cursor: pointer;
+      border-bottom: solid 1px #1a202c;
+      margin-bottom: 15px;
+      text-align: center;
+      width: 100%;
+  }
 
 .hero{
     display: grid;
@@ -93,16 +168,18 @@ body{
     
 }
 .hero-text-span{
-    color: #1ca7d0;
+    color: var(--theme-color);
 }
 
 h2{
-    color: #1ca7d0;
+    color: var(--theme-color);
 }
 .about-container{
     display: grid;
     place-items: center;
     margin-top: 60px;
+    padding: 0 10vw;
+    
 }
 .about{
     display: flex;
@@ -110,7 +187,8 @@ h2{
     justify-content: center;
     align-items: center;
     line-height: 24px;
-    width: 500px;
+    max-width: 500px;
+    
 }
 .projects{
     display: grid;
@@ -139,7 +217,7 @@ display: block;
 height: auto;
 }
 .projects-images:hover{
-    box-shadow: 5px 10px 18px #3b5998;
+    box-shadow: var(--box-shadow);
     transform: scale(1.05);
     transition: all 0.2s ease-in-out;
 }
@@ -174,7 +252,7 @@ height: auto;
     padding: 20px;
 }
 .experience-company h3{
-    background-color: #e2e8f0;
+    background-color: var(--color);
     padding: 10px;
     text-align: center;
     border-radius: 6px;
@@ -217,9 +295,8 @@ height: auto;
     padding: 0 16px;
 }
 .mail-button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display: grid;
+    place-items: center;
     gap: 0.5rem;
     text-decoration: none;
     border: solid 1px ;
@@ -237,12 +314,24 @@ height: auto;
   left: 0;
   width: 0;
   height: 100%;
-    background: #1ca7d0;
+    background: var(--theme-color);
     position: absolute;
     -webkit-transition: .3s ease-out all;
     -o-transition: .3s ease-out all;
     transition: .3s ease-out all;
     
+}
+.mail-button:hover{
+    color: var(--whites-shade);
+}
+ .email-btn{
+   z-index: 9;
+}
+.mail-button:hover  svg path{
+    fill: var(--whites-shade);
+}
+.email-btn svg{
+    padding-top: 7px;
 }
 .mail-button:hover::after{
     width: 100%;
@@ -260,6 +349,43 @@ height: auto;
     margin-top: 20px;
     margin-bottom: 10px;
 }
-.icons path:hover{
-    fill: #1ca7d0;
+.icons:hover path{
+    fill: var(--theme-color);
+}
+
+
+@media only screen and (max-width: 900px){
+    .hero{
+        grid-template-columns: 1fr;
+        row-gap: 40px;
+        text-align: center;
+        font-size: 30px;
+    }
+    .more-projects{
+        grid-template-columns: 1fr 1fr;
+    }
+
+}
+
+@media only screen and (max-width: 550px){
+    .hero{
+        font-size: 25px;
+        line-height: normal;
+    }
+    .hero-text{
+        padding: 0 10vw;
+    }
+    .projects-grid{
+        grid-template-columns: 1fr;
+    }
+    .more-projects{
+        grid-template-columns: 1fr;
+    }
+    .nav-aside{
+        display: none;
+    }
+    .hamburger{
+        display:block;
+        cursor: pointer;
+    }
 }
