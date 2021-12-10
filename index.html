@@ -4,30 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
     <title>Femi's Portfolio</title>
     <link rel="stylesheet" href="style.css">
     
 </head>
 <body>
-    <nav class="nav">
+    <nav class="nav" id="to-top">
         <div class="logo">
             
             <img src="images/logo.png" alt="my logo">
         </div>
+        <!-- Actual Nav -->
         <div class="nav-aside">
             <ul class="nav-ul">
-                <li><a href="#about"></a>About </li>
-                <li><a href="#projects" ></a>Projects</li>
-                <li><a href="#" ></a>Experience</li>
-                <li><a href="#" ></a>Contact</li>
-                <li><a href="#" ></a>Blog</li>
-                <li><img src="images/night.svg" alt=""> </li>
+                <li><a href="#about">About</a> </li>
+                <li><a href="#projects" >Projects</a></li>
+                <li><a href="#experience" >Experience</a></li>
+                <li><a href="#contact" >Contact</a></li>
+                <!-- <li><a href="#" >Blog</a></li> -->
+                <li><a href="#" class="top-tooltip click-day" data-tooltip="Dark-mode"><img class="imgBtn" src="images/night.svg" alt=""></a></li>
+                <li><a href="" class=" top-tooltip click-night hidden"  data-tooltip="Light-mode"> <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/></svg></a></li>
+
             </ul>
         </div>
         <div class="hamburger">
             <img src="images/icon-hamburger.svg" alt="" />
           </div>
     </nav>
+    <!-- Modal -->
     <div class="modal">
         <div class="modal-box">
           <div class="closeModal">
@@ -35,12 +43,14 @@
           </div>
           <div class="modal-flex">
             <ul>
-                <li><a href="#about"></a>About </li>
-                <li><a href="#projects" ></a>Projects</li>
-                <li><a href="#" ></a>Experience</li>
-                <li><a href="#" ></a>Contact</li>
-                <li><a href="#" ></a>Blog</li>
-                <li><img src="images/night.svg" alt=""> </li>
+                <li><a href="#about">About</a> </li>
+                <li><a href="#projects" >Projects</a></li>
+                <li><a href="#experience" >Experience</a></li>
+                <li><a href="#contact" >Contact</a></li>
+                  <!-- <li><a href="#" >Blog</a></li> -->
+                
+                <li><a href="#" class="click-day"  data-tooltip="dark-mode"><img class="imgBtn" src="images/night.svg" alt=""> </a></li>
+                <li><a href="" class="click-night hidden"> <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/></svg></a></li>
             </ul>
           </div>
         </div>
@@ -61,7 +71,10 @@
                     About me
                 </h2>
                 <p class="about-para">
-                    Lorem ipsum dolor sit amet consectetur, adipisicing elit. Non sapiente optio iure ea accusamus odio id consequatur, saepe, atque hic animi recusandae unde ipsa molestiae eveniet rerum dolor? Similique id a tempora commodi eveniet alias, facere magni fugit corporis deleniti?
+                    Hi I'm Femi Gabriel Efejuku a <strong> front end web developer</strong> from Lagos,Nigeria
+                    <br>
+                    I enjoy designing and creating interesting digital experiences
+                    I excel at the technical side of things. 
                 </p>
             </div>
            </div>
@@ -69,18 +82,19 @@
                 <h2 class="projects-h2">
                     Featured Projects
                 </h2>
-                <div class="projects-grid">
+                <div class="projects-grid" >
                     <div class="first-text">
                         <div class="first-text-boxed text-border">
                             <h3 class="first-text-h3">
                                 C.R.U.D app
                             </h3>
                             <p class="first-text-p">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo fugiat dolorum fugit cumque ipsum placeat delectus! Atque, corporis suscipit dolores veritatis assumenda voluptatum maiores. Maiores, impedit? Repellat, possimus fugiat?
+                               A full create, read update and delete app. Why make a boring todo List when I could solve a problem i personally
+                               have with this. Currently working on this to include authentication.
                             </p>
                         </div>
                         <div class="first-text-desc description">
-                            Lorem, ipsum.
+                            MongoDB, REACT, Express, NodeJs
                         </div>
                     </div>
                     <div class="first-project">
@@ -95,11 +109,12 @@
                                 REACT api
                             </h3>
                             <p class="second-text-p">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo fugiat dolorum fugit cumque ipsum placeat delectus! Atque, corporis suscipit dolores veritatis assumenda voluptatum maiores. Maiores, impedit? Repellat, possimus fugiat?
+                               This is a working link shortener to shorten any link using the shrtco.de api
+                               It was done as part of a front end mentor challenge
                             </p>
                         </div>
                         <div class="second-text-desc description">
-                            Lorem, ipsum.
+                            REACT, Axios
                         </div>
                     </div>
                     <div class="second-project">
@@ -114,11 +129,13 @@
                                 Full Stack Chat App
                             </h3>
                             <p class="third-text-p">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo fugiat dolorum fugit cumque ipsum placeat delectus! Atque, corporis suscipit dolores veritatis assumenda voluptatum maiores. Maiores, impedit? Repellat, possimus fugiat?
+                                Its a group lobby chat app built with react.
+                                <br>
+                                I used firebase as both a backend and authenticationfor several users 
                             </p>
                         </div>
                         <div class="third-text-desc description">
-                            Lorem, ipsum.
+                           REACT, Firebase
                         </div>
                     </div>
                     <div class="third-project">
@@ -133,11 +150,12 @@
                                 React Gallery
                             </h3>
                             <p class="fourth-text-p">
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, illo fugiat dolorum fugit cumque ipsum placeat delectus! Atque, corporis suscipit dolores veritatis assumenda voluptatum maiores. Maiores, impedit? Repellat, possimus fugiat?
-                            </p>
+                               This is a gallery app built with react on the unsplash api
+                               <br>
+                               It allows for filtering and searching while giving full credit to the creators themselves 
                         </div>
                         <div class="fourth-text-desc description">
-                            Lorem, ipsum.
+                            React, Axios
                         </div>
                     </div>
                     <div class="fourth-project">
@@ -168,9 +186,11 @@
                                         Api Shortener
                                     </h4>
                                     <p class="more-projects-paragraph">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint porro tenetur nisi itaque tempore iste inventore architecto recusandae aspernatur autem.
+                                        This is a working link shortener to shorten any link using the shrtco.de api
+                                        It was done as part of a front end mentor challenge.
+                                        This was done with vanillaJs and fetch api
                                     </p>
-                                    <span class="moreprojects-description"> Lorem ipsum dolor sit.</span>
+                                    <span class="moreprojects-description"> <strong>Vanilla Js</strong> </span>
                                 </div>
                             
                         </div>
@@ -192,9 +212,9 @@
                                    Image Slider.
                                 </h4>
                                 <p class="more-projects-paragraph">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint porro tenetur nisi itaque tempore iste inventore architecto recusandae aspernatur autem.
+                                    This is a project that plays with the browser view height allowing you to slide image into view
                                 </p>
-                                <span class="moreprojects-description"> Lorem ipsum dolor sit.</span>
+                                <span class="moreprojects-description"> <strong>Vanilla Js</strong></span>
                             </div>
                         
                     </div>
@@ -217,34 +237,32 @@
                                         Landing Page
                                     </h4>
                                     <p class="more-projects-paragraph">
-                                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint porro tenetur nisi itaque tempore iste inventore architecto recusandae aspernatur autem.
-                                    </p>
-                                    <span class="moreprojects-description"> Lorem ipsum dolor sit.</span>
+                                        A beautiful, responsive landing page done as part of a frontend mentor challenge 
+                                    <span class="moreprojects-description"> <strong>Vanilla Js</strong></span>
                                 </div>
                             
                         </div>
                     </div>
                 </div>
                 </div>
-        <div class="experience">
+        <div class="experience" id="experience">
             <h2 class="experience-h2">
                 Experience
             </h2>
             <div class="experience-grid ">
                 <div class="experience-company"><h3>Foremedia</h3></div>
-                <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rerum debitis a molestiae, repudiandae officiis neque voluptate? Aspernatur incidunt debitis, enim numquam alias delectus officia animi omnis soluta eveniet expedita accusantium esse impedit qui magni. Iusto illum earum nisi sunt voluptas atque. Nostrum impedit quisquam iusto rem quam assumenda aut natus.</div>
-            </div>
+                In charge of creating digital experiences. 
         </div>
-        <div class="contact">
+        <div class="contact" id="contact">
             <h2 class="contact-h2">
                 Contact Me
             </h2>
             <p class="contact-paragraph">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Maxime a corrupti incidunt consequatur, voluptatum nam!</p>
-            <form action="" class="form">
-                <input type="text" id="name" placeholder="Name">
-                <input type="email"  id="email" placeholder="Email">
-                <input type="text" id="subject" placeholder="Subject">
-                <input type="text" id="message" placeholder="Message">
+            <form action="" class="form" name="contact" data-netlify="true">
+                <input type="text" id="name" placeholder="Name" name="name">
+                <input type="email"  id="email" placeholder="Email" name="email">
+                <input type="text" id="subject" placeholder="Subject" name="subject">
+                <input type="text" id="message" placeholder="Message" name="message">
                 <button type="submit" id="submit">Send Message</button>
                 <a href="mailto:obito.femi@gmail.com" class="mail-button">
                     <span class="email-btn">
@@ -259,18 +277,18 @@
         <p class="footer-paragraph">
             Made from plain vanilla js and cs by Femi Efejuku 
         </p>
-        <a href="" id="scroll-to-top"> 🚀 Scroll to Top 🚀 </a>
+        <a href="#to-top" id="scroll-to-top"> 🚀 Scroll to Top 🚀 </a>
         <ul class="footer-icons">
-            <li><a href="github.com/femizi">
+            <li><a class="tooltip" data-tooltip="Github" href="http://www.github.com/femizi">
                 <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/></svg>
             </a> </li>
             <li>
-                <a href="https://objective-cray-f425b7.netlify.app/">
+                <a  class="tooltip" data-tooltip="CV" href="https://objective-cray-f425b7.netlify.app/">
                     <svg class="icons" width="24" height="24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd"><path d="M3 24h19v-23h-1v22h-18v1zm17-24h-18v22h18v-22zm-3 17h-12v1h12v-1zm0-3h-12v1h12v-1zm0-3h-12v1h12v-1zm-7.348-3.863l.948.3c-.145.529-.387.922-.725 1.178-.338.257-.767.385-1.287.385-.643 0-1.171-.22-1.585-.659-.414-.439-.621-1.04-.621-1.802 0-.806.208-1.432.624-1.878.416-.446.963-.669 1.642-.669.592 0 1.073.175 1.443.525.221.207.386.505.496.892l-.968.231c-.057-.251-.177-.449-.358-.594-.182-.146-.403-.218-.663-.218-.359 0-.65.129-.874.386-.223.258-.335.675-.335 1.252 0 .613.11 1.049.331 1.308.22.26.506.39.858.39.26 0 .484-.082.671-.248.187-.165.322-.425.403-.779zm3.023 1.78l-1.731-4.842h1.06l1.226 3.584 1.186-3.584h1.037l-1.734 4.842h-1.044z"/></svg>
                 </a>
             </li>
             <li>
-                <a href="mailto:obito.femi@gmail.com">
+                <a class="tooltip" data-tooltip="Email" href="mailto:obito.femi@gmail.com">
                     <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
                 </a>
             </li>
