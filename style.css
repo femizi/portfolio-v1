@@ -97,14 +97,14 @@ button {
   align-content: center;
 }
 .nav-ul li {
-  margin-right: 12px;
+  margin-right: 15px;
   /* cursor: pointer; */
 }
 .nav-ul li a {
   text-decoration: none;
   color: var(--text-color);
 }
-.nav-ul :not(:last-child):hover {
+.nav-ul li a:hover {
   border-bottom: solid 1px var(--black-color);
 }
 .top-tooltip {
@@ -343,6 +343,16 @@ strong {
   max-width: auto;
   width: 100%;
 }
+
+input[type=text]{
+  font: inherit;
+  padding: 10px;
+}
+input[type=email]{
+  font: inherit;
+  padding: 10px;
+}
+
 #subject {
   grid-area: subject;
 }
@@ -410,7 +420,7 @@ strong {
   align-content: center;
   gap: 20px;
   list-style: none;
-  margin-top: 20px;
+  margin-top: 37px;
   margin-bottom: 10px;
 }
 .tooltip {
@@ -444,7 +454,12 @@ strong {
   fill: #1a202c;
 }
 #scroll-to-top {
+  margin-top: 20px;
   color: var(--text-color);
+}
+#scroll-to-top:hover .bob-up{
+  display: inline-block;
+  transform: translateY(-5px);
 }
 /* Media queries */
 @media only screen and (max-width: 900px) {
