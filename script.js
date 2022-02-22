@@ -1,4 +1,9 @@
+
+ 
+
+
 // dark-mode handling
+
 const toggleBtn = document.querySelector(".top-tooltip");
 
 const clickDay = document.querySelector(".click-day");
@@ -9,6 +14,7 @@ function changeImg() {
 }
 function toggle() {
   document.body.classList.toggle("dark-mode");
+  document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#1a202c')
   changeImg();
 }
 clickNight.addEventListener("click", toggle);
@@ -26,6 +32,8 @@ function changeImg1() {
 
 function toggle1() {
   document.body.classList.toggle("dark-mode");
+  document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#1a202c')
+
   changeImg1();
   closeModal();
 }

@@ -87,6 +87,7 @@ button {
   display: block;
   height: auto;
   box-shadow: var(--box-shadow);
+  object-fit: contain;
 }
 .image-profile:hover {
   box-shadow: var(--box-shadow-hover);
@@ -210,7 +211,7 @@ button {
   display: flex;
   justify-content: center;
   align-content: center;
-  height: 100%;
+
   animation: fadeInLeft 2s;
 }
 

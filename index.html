@@ -9,6 +9,9 @@
 <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
 <link rel="manifest" href="/site.webmanifest">
     <title>Femi's Portfolio</title>
+    <meta name="description" content="Femi's developer Portfolio showing projects worked on">
+    <meta name="theme-color" content="#fff">
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
 </head>
@@ -83,7 +86,8 @@
                     Featured Projects
                 </h2>
                 <div class="projects-grid" >
-                    <div class="first-text">
+                    <div class="first-text aos-animate" data-aos="fade-right" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
                         <div class="first-text-boxed text-border">
                             <h3 class="first-text-h3">
                                 C.R.U.D app
@@ -97,54 +101,61 @@
                             MongoDB, REACT, Express, NodeJs
                         </div>
                     </div>
-                    <div class="first-project">
+                    <div class="first-project aos-animate" data-aos="fade-left" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
                         <a href="https://femizi-expense-tracker.herokuapp.com/">
                             <img src="images/react-expense.png" alt="" class="projects-images box
                             ">
                         </a>
                     </div>
-                    <div class="second-text">
+                    <div class="second-text aos-animate" data-aos="fade-right" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
                         <div class="second-text-boxed text-border">
                             <h3 class="second-text-h3">
-                                REACT API
+                                IP Address Tracker
                             </h3>
                             <p class="second-text-p">
-                               This is a working link shortener to shorten any link using the shrtco.de API
-                               It was done as part of a front end mentor challenge.
+                               This is an Ip address tracker made with ipify and leafletjs.
+                               On submission it gives you the address, Isp and timezone. It then shows the location on a map
                             </p>
                         </div>
                         <div class="second-text-desc description">
-                            REACT, Axios
+                            Fetch Api, Leafletjs 
                         </div>
                     </div>
-                    <div class="second-project">
-                        <a href="https://musing-mahavira-73a977.netlify.app/">
-                            <img src="images/react-api.png" alt="" class="projects-images box
+                    <div class="second-project aos-animate"  data-aos="fade-left" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
+                        <a href="https://angry-wright-106060.netlify.app/">
+                            <img src="images/ip tracker.webp" alt="" class="projects-images box
                             ">
                         </a>
                     </div>
-                    <div class="third-text">
+                    <div class="third-text aos-animate" data-aos="fade-right" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
                         <div class="third-text-boxed text-border">
                             <h3 class="third-text-h3">
-                                Full Stack Chat App
+                                TODO app
                             </h3>
                             <p class="third-text-p">
-                                Its a group lobby chat app built with React.
+                                The Quintessential TODO app
                                 <br>
-                                I used firebase as both a backend and authenticationfor several users 
+                                Every front end developer at one time has had to build this. <br> 
+                                I threw in a little spice with the addition of drag and drop and filtering.
                             </p>
                         </div>
                         <div class="third-text-desc description">
-                           REACT, Firebase
+                           REACT, Context api, React beautiful dnd
                         </div>
                     </div>
-                    <div class="third-project">
-                        <a href="https://femichat-eb0c3.web.app/">
-                            <img src="images/femichat.png" alt="" class="projects-images box
+                    <div class="third-project aos-animate"  data-aos="fade-left" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
+                        <a href="https://pedantic-hoover-97329d.netlify.app/">
+                            <img src="images/todo screenshot.webp" alt="" class="projects-images box
                             ">
                         </a>
                     </div>
-                    <div class="fourth-text">
+                    <div class="fourth-text aos-animate" data-aos="fade-right" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
                         <div class="fourth-text-boxed text-border">
                             <h3 class="fourththird-text-h3">
                                 React Gallery
@@ -152,13 +163,15 @@
                             <p class="fourth-text-p">
                                This is a gallery app built with react on the Unsplash API
                                <br>
-                               It allows for filtering and searching while giving full credit to the creators themselves. 
+                               It allows for filtering and searching while giving full credit to the creators
+                                themselves. 
                         </div>
                         <div class="fourth-text-desc description">
                             React, Axios
                         </div>
                     </div>
-                    <div class="fourth-project">
+                    <div class="fourth-project aos-animate"  data-aos="fade-left" data-aos-offset="100"
+                    data-aos-easing="ease-in-sine">
                         <a href="https://heuristic-nightingale-979b9f.netlify.app/">
                             <img src="images/react-gallery.png" alt="" class="projects-images box
                             ">
@@ -254,8 +267,8 @@
             <div class="experience-grid ">
                 <div class="experience-company"><h3>Foremedia</h3></div>
                 This is my current job <br>
-                I am in charge of creating digital experiences.
-                I design graphics and handle the frontend. 
+                I am in charge of creating web pages and content writing.
+                I also do copy writing and graphics design 
         </div>
         <div class="contact" id="contact">
             <h2 class="contact-h2">
@@ -301,5 +314,9 @@
         </ul>
     </footer>
     <script src="script.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+      </script>
 </body>
 </html>
