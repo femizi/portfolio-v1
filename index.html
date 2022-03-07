@@ -11,6 +11,11 @@
     <title>Femi's Portfolio</title>
     <meta name="description" content="Femi's developer Portfolio showing projects worked on">
     <meta name="theme-color" content="#fff">
+    <meta property="og:type" content="article" />
+    <meta property="og:image" content="images/profile.jpg" />
+    <meta name="twitter:creator" content="@sonofpharoh" />
+    <meta property="og:site_name" content="Femi's Portfolio" />
+    <meta name="twitter:title" content="Femi's Portfolio" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     
@@ -28,7 +33,7 @@
                 <li><a href="#projects" >Projects</a></li>
                 <li><a href="#experience" >Experience</a></li>
                 <li><a href="#contact" >Contact</a></li>
-                <!-- <li><a href="#" >Blog</a></li> -->
+                <li><a href="https://femi-blog.netlify.app" >Blog</a></li>
                 <li><button href="#" class="top-tooltip click-day " data-tooltip="Dark-mode"><img class="imgBtn" src="images/night.svg" alt=""></button></li>
                 <li><button href="" class="top-tooltip click-night hidden"  data-tooltip="Light-mode"> <svg class="icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/></svg></button></li>
 
@@ -50,7 +55,7 @@
                 <li><a href="#projects" >Projects</a></li>
                 <li><a href="#experience" >Experience</a></li>
                 <li><a href="#contact" >Contact</a></li>
-                  <!-- <li><a href="#" >Blog</a></li> -->
+                  <li><a href="https://femi-blog.netlify.app" >Blog</a></li>
                 
                 <li><button href="#" class="hidden-tooltip click-day1 "  data-tooltip="dark-mode"><img class="imgBtn" src="images/night.svg" alt=""> </button></li>
                 <li><button href="" class="hidden-tooltip  click-night1 hidden"> <svg class="other-icons" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm6.312-10.897c-3.314 0-6 2.686-6 6s2.686 6 6 6 6-2.686 6-6-2.686-6-6-6z"/></svg></button></li>
@@ -267,7 +272,8 @@
             <div class="experience-grid ">
                 <div class="experience-company"><h3>Foremedia</h3></div>
                 This is my current job <br>
-                I am in charge of creating web pages and content writing.
+                I am in charge of creating web pages with elementor and html,class
+                 and content writing for those pages.
                 I also do copy writing and graphics design 
         </div>
         <div class="contact" id="contact">
@@ -277,7 +283,7 @@
             <p class="contact-paragraph">
                 Looking to Work. You can reach out to me through this contact form or you can send an email instead
             </p>
-            <form action="" class="form" name="contact" data-netlify="true">
+            <form  class="form" name="contact" data-netlify="true">
                 <input type="text" id="name" placeholder="Name" name="name">
                 <input type="email"  id="email" placeholder="Email" name="email">
                 <input type="text" id="subject" placeholder="Subject" name="subject">
@@ -286,8 +292,9 @@
                 <a href="mailto:obito.femi@gmail.com" class="mail-button">
                     <span class="email-btn">
                         <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"><path d="M12 12.713l-11.985-9.713h23.97l-11.985 9.713zm0 2.574l-12-9.725v15.438h24v-15.438l-12 9.725z"/></svg>
-                    Send a Mail Instead!</a>
-                    </span>
+                Send a Mail Instead!
+            </span></a>   
+                    
                     
             </form>
         </div>

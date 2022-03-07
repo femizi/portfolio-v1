@@ -32,7 +32,7 @@ function changeImg1() {
 
 function toggle1() {
   document.body.classList.toggle("dark-mode");
-  document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#1a202c')
+  document.querySelector('meta[name="theme-color"]').toggleAttribute('content',  '#1a202c')
 
   changeImg1();
   closeModal();
