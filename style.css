@@ -40,6 +40,7 @@ body {
   font-size: 16px;
   scroll-behavior: smooth;
   color: var(--text-color);
+  overflow-x:hidden;
 }
 
 .nav {
