@@ -4,11 +4,13 @@ html {
 }
 *::after *::before{
   box-sizing: border-box;
+  /* border: red 2px solid */
 }
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  /* border: red 2px solid */
 }
 :root {
   --text-shadow: #888888 0px 10px 15px -3px;
@@ -47,6 +49,7 @@ body {
   display: flex;
   justify-content: space-between;
   align-content: center;
+  overflow: hidden;
   color: var(--black-color);
   padding-top: 30px;
   padding-left: 10vw;
@@ -468,11 +471,15 @@ input[type=email]{
 }
 /* Media queries */
 @media only screen and (max-width: 900px) {
+  body{
+    overflow-x: hidden;
+  }
   .hero {
     grid-template-columns: 1fr;
-    row-gap: 40px;
+    row-gap: 20px;
     text-align: center;
-    font-size: 30px;
+    font-size: 2rem;
+    overflow: hidden;
   }
   .more-projects {
     grid-template-columns: 1fr 1fr;
@@ -481,11 +488,14 @@ input[type=email]{
 
 @media only screen and (max-width: 550px) {
   .hero {
-    font-size: 25px;
+    font-size: 20px;
     line-height: normal;
   }
   .hero-text {
-    padding: 0 10vw;
+    padding: 0 0;
+  }
+  .hero-image{
+    padding: 0;
   }
   .projects-grid {
     grid-template-columns: 1fr;
