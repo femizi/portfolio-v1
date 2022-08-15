@@ -1,10 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Titillium+Web:wght@400;600;700&display=swap");
+@import "https://unpkg.com/open-props";
+
+/* optional imports that use the props */
+@import "https://unpkg.com/open-props/normalize.min.css";
+
+
 html {
   scroll-behavior: smooth;
 }
 *::after *::before{
   box-sizing: border-box;
-  /* border: red 2px solid */
+  border: red 2px solid
 }
 * {
   margin: 0;
@@ -44,9 +50,34 @@ body {
   color: var(--text-color);
  
 }
-
+main:before{
+  content: "";
+  z-index: -1;
+  animation: grain 8s steps(10) infinite;
+  background-image: url("images/paper_1.png");
+  background-color: red;
+  height: 300%;
+  left: -50%;
+  opacity: 0.3;
+  position: fixed;
+  top: -100%;
+  width: 300%;
+}
+@keyframes grain {
+  0%, 100% { transform:translate(0, 0) }
+  10% { transform:translate(-5%, -10%) }
+  20% { transform:translate(-15%, 5%) }
+  30% { transform:translate(7%, -25%) }
+  40% { transform:translate(-5%, 25%) }
+  50% { transform:translate(-15%, 10%) }
+  60% { transform:translate(15%, 0%) }
+  70% { transform:translate(0%, 15%) }
+  80% { transform:translate(3%, 35%) }
+  90% { transform:translate(-10%, 10%) }
+}
 .nav {
   display: flex;
+  width: 100%;
   justify-content: space-between;
   align-content: center;
   overflow: hidden;
@@ -84,7 +115,7 @@ button {
 .logo {
   height: 50px;
   width: 60px;
-  margin-top: -9px;
+  padding-top: -9px;
 }
 .image-profile {
   max-width: 100%;
