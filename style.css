@@ -2,7 +2,7 @@
 @import "https://unpkg.com/open-props";
 
 /* optional imports that use the props */
-@import "https://unpkg.com/open-props/normalize.min.css";
+
 
 
 html {
@@ -50,7 +50,7 @@ body {
   color: var(--text-color);
  
 }
-main:before{
+.grain:before{
   content: "";
   z-index: -1;
   animation: grain 8s steps(10) infinite;

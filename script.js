@@ -8,11 +8,13 @@ const toggleBtn = document.querySelector(".top-tooltip");
 
 const clickDay = document.querySelector(".click-day");
 const clickNight = document.querySelector(".click-night");
+const main = document.querySelector(".main")
 function changeImg() {
   clickDay.classList.toggle("hidden");
   clickNight.classList.toggle("hidden");
 }
 function toggle() {
+  main.classList.toggle("grain")
   document.body.classList.toggle("dark-mode");
   document.querySelector('meta[name="theme-color"]').setAttribute('content',  '#1a202c')
   changeImg();
@@ -31,6 +33,7 @@ function changeImg1() {
 }
 
 function toggle1() {
+  main.classList.toggle("grain")
   document.body.classList.toggle("dark-mode");
   document.querySelector('meta[name="theme-color"]').toggleAttribute('content',  '#1a202c')
 
