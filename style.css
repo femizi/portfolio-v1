@@ -2,14 +2,12 @@
 
 /* optional imports that use the props */
 
-
-
 html {
   scroll-behavior: smooth;
+  scroll-padding-block-start: 80px;
 }
-*::after *::before{
+*::after *::before {
   box-sizing: border-box;
-  border: red 2px solid
 }
 * {
   margin: 0;
@@ -19,7 +17,7 @@ html {
 }
 :root {
   --text-shadow: #888888 0px 10px 15px -3px;
-  --whites-shade: #f7f8fa;
+  --whites-shade: rgb(247, 248, 250, 0.4);
   --box-shadow: #888888 5px 10px 18px 0px;
   --box-shadow-hover: 5px 10px 18px #3b5998;
   --theme-color: #1ca7d0;
@@ -47,9 +45,9 @@ body {
   font-size: 16px;
   scroll-behavior: smooth;
   color: var(--text-color);
- 
+  transition: all 300ms cubic-bezier(0.77, 0, 0.175, 1);
 }
-.grain:before{
+.grain:before {
   content: "";
   z-index: -1;
   animation: grain 8s steps(10) infinite;
@@ -63,28 +61,53 @@ body {
   width: 300%;
 }
 @keyframes grain {
-  0%, 100% { transform:translate(0, 0) }
-  10% { transform:translate(-5%, -10%) }
-  20% { transform:translate(-15%, 5%) }
-  30% { transform:translate(7%, -25%) }
-  40% { transform:translate(-5%, 25%) }
-  50% { transform:translate(-15%, 10%) }
-  60% { transform:translate(15%, 0%) }
-  70% { transform:translate(0%, 15%) }
-  80% { transform:translate(3%, 35%) }
-  90% { transform:translate(-10%, 10%) }
+  0%,
+  100% {
+    transform: translate(0, 0);
+  }
+  10% {
+    transform: translate(-5%, -10%);
+  }
+  20% {
+    transform: translate(-15%, 5%);
+  }
+  30% {
+    transform: translate(7%, -25%);
+  }
+  40% {
+    transform: translate(-5%, 25%);
+  }
+  50% {
+    transform: translate(-15%, 10%);
+  }
+  60% {
+    transform: translate(15%, 0%);
+  }
+  70% {
+    transform: translate(0%, 15%);
+  }
+  80% {
+    transform: translate(3%, 35%);
+  }
+  90% {
+    transform: translate(-10%, 10%);
+  }
 }
 .nav {
+  position: sticky;
+  top: 0;
   display: flex;
-  width: 100%;
+  z-index: 1000;
+  width: 100vw;
   justify-content: space-between;
   align-content: center;
   overflow: hidden;
   color: var(--black-color);
-  padding-top: 30px;
+  padding-top: 20px;
   padding-left: 10vw;
   padding-right: 10vw;
-  padding-bottom: 30px;
+  padding-bottom: 20px;
+  backdrop-filter: blur(5px);
   background-color: var(--whites-shade);
 }
 /* utility classes */
@@ -101,6 +124,9 @@ button {
 .hidden {
   display: none;
 }
+.block {
+  display: block;
+}
 .box {
   box-shadow: var(--box-shadow);
 }
@@ -112,10 +138,10 @@ button {
   border-style: solid;
 }
 .logo {
-  height: 50px;
-  width: 60px;
-  padding-top: -9px;
+  height: 40px;
+  width: 40px;
 }
+
 .image-profile {
   max-width: 100%;
   display: block;
@@ -140,6 +166,7 @@ button {
 }
 .nav-ul li a {
   text-decoration: none;
+  font-weight: 600;
   color: var(--text-color);
 }
 .nav-ul li a:hover {
@@ -170,8 +197,16 @@ button {
 .hamburger {
   display: none;
 }
+.bar {
+  display: block;
+  width: 25px;
+  height: 3px;
+  margin: 5px auto;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  background-color: var(--black-color);
+}
 .modal {
-  display: none;
   position: fixed;
   top: 0;
   left: 0;
@@ -181,43 +216,44 @@ button {
   background: rgba(0, 0, 0, 0.5);
 }
 .modal-box {
+  min-height: 100vh;
   margin-top: 10%;
-  margin-left: 10vw;
-  margin-right: 10vw;
+  font-weight: 600;
+  font-size: 50px;
 
   background: #fff;
   color: #1a202c;
   border-radius: 5px;
   display: grid;
+
   place-items: center;
 
-  padding: 50px;
+  padding: 30px;
   position: relative;
   animation: modalopen 0.7s;
 }
 @keyframes modalopen {
   0% {
     opacity: 0;
+    filter: blur(5px);
   }
   100% {
     opacity: 1;
+    filter: blur(0);
   }
 }
-.closeModal {
-  position: absolute;
-  top: 0;
-  right: 0;
-  padding: 20px;
-  cursor: pointer;
-}
+
 .modal-flex {
   width: 100%;
-  display: flex;
+  display: grid;
+
   align-items: center;
   justify-content: center;
 }
 .modal-flex ul {
   list-style: none;
+  display: grid;
+  gap: 30px;
 }
 .modal-flex ul li {
   cursor: pointer;
@@ -241,22 +277,34 @@ button {
   font-size: 40px;
   margin-top: 20px;
 }
+@keyframes infiniteArrow {
+  0% {
+    transform: translateY(-30%);
+  }
+  100% {
+    transform: translateY(30%);
+  }
+}
 .hero-text {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-content: center;
+  gap: 1rem;
 
-  animation: fadeInLeft 2s;
+  animation: fadeInBottom cubic-bezier(.5, -.5, .1, 1.5) 2s;
 }
 
-@keyframes fadeInLeft {
+@keyframes fadeInBottom {
   0% {
     opacity: 0;
-    transform: translateX(-20px);
+    filter: blur(5px);
+    transform: translateY(20px);
   }
   100% {
     opacity: 1;
-    transform: translateX(0);
+    filter: blur(0);
+    transform: translateY(0);
   }
 }
 .hero-text h1 {
@@ -264,6 +312,34 @@ button {
 }
 .hero-text-span {
   color: var(--theme-color);
+}
+.hero-left {
+  margin-inline-end: auto;
+  align-items: center;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+
+  height: 8.5rem;
+  overflow: hidden;
+}
+.hero-left > span {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  flex-direction: column;
+  gap: 3rem;
+  transform: translateY(-30%);
+  animation: infiniteArrow 2s cubic-bezier(0.175, 0.885, 0.32, 1) infinite;
+}
+.hero-left p span {
+  display: block;
+  opacity: 0.6;
+  text-align: left;
+  font-weight: 300;
+  margin-block-end: 0.5rem;
+  font-size: max(14px, 1.5rem);
+  line-height: normal;
 }
 
 h2 {
@@ -382,11 +458,11 @@ strong {
   width: 100%;
 }
 
-input[type=text]{
+input[type="text"] {
   font: inherit;
   padding: 10px;
 }
-input[type=email]{
+input[type="email"] {
   font: inherit;
   padding: 10px;
 }
@@ -495,13 +571,13 @@ input[type=email]{
   margin-top: 20px;
   color: var(--text-color);
 }
-#scroll-to-top:hover .bob-up{
+#scroll-to-top:hover .bob-up {
   display: inline-block;
   transform: translateY(-5px);
 }
 /* Media queries */
 @media only screen and (max-width: 900px) {
-  body{
+  body {
     overflow-x: hidden;
   }
   .hero {
@@ -524,7 +600,7 @@ input[type=email]{
   .hero-text {
     padding: 0 0;
   }
-  .hero-image{
+  .hero-image {
     padding: 0;
   }
   .projects-grid {
@@ -540,6 +616,17 @@ input[type=email]{
   .hamburger {
     display: block;
     cursor: pointer;
+  }
+  .hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+  }
+
+  .hamburger.active .bar:nth-child(1) {
+    transform: translateY(8px) rotate(45deg);
+  }
+
+  .hamburger.active .bar:nth-child(3) {
+    transform: translateY(-8px) rotate(-45deg);
   }
   .form {
     grid-template-areas:

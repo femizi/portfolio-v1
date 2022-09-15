@@ -36,24 +36,27 @@ function toggle1() {
   main.classList.toggle("grain")
   document.body.classList.toggle("dark-mode");
   document.querySelector('meta[name="theme-color"]').toggleAttribute('content',  '#1a202c')
-
+  modal.classList.toggle(`block`);
+  modal.classList.toggle(`hidden`)
   changeImg1();
-  closeModal();
+  ;
 }
 clickNight1.addEventListener("click", toggle1);
 toggleBtn1.addEventListener("click", toggle1);
 
 // modal handling
 const modal = document.querySelector(".modal");
-const loginBtn = document.querySelector(".hamburger");
+const hamburger = document.querySelector(".hamburger");
 const closeBtn = document.querySelector(".closeModal");
 
-loginBtn.addEventListener("click", openModal);
+hamburger.addEventListener("click", openModal);
 closeBtn.addEventListener("click", closeModal);
 window.addEventListener("click", outsideClick);
 
 function openModal() {
-  modal.style.display = "block";
+  hamburger.classList.toggle("active");
+  modal.classList.toggle(`block`);
+  modal.classList.toggle(`hidden`)
 }
 
 function closeModal() {
