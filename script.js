@@ -1,10 +1,25 @@
 // dark-mode handling
 
 const toggleBtn = document.querySelector(".top-tooltip");
+const cursor =document.querySelector(`.cursor`)
 
 const clickDay = document.querySelector(".click-day");
 const clickNight = document.querySelector(".click-night");
 const main = document.querySelector(".main");
+console.log(window.matchMedia)
+if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+  // Dark
+  main.classList.toggle("grain");
+  document.body.classList.toggle("dark-mode");
+  document
+    .querySelector('meta[name="theme-color"]')
+    .setAttribute("content", "#1a202c");
+  changeImg();
+  
+} else {
+  // Light
+}
+
 function changeImg() {
   clickDay.classList.toggle("hidden");
   clickNight.classList.toggle("hidden");
@@ -51,7 +66,6 @@ const hamburger = document.querySelector(".hamburger");
 
 hamburger.addEventListener("click", openModal);
 
-window.addEventListener("click", outsideClick);
 
 function openModal() {
   hamburger.classList.toggle("active");
@@ -63,8 +77,12 @@ function closeModal() {
   modal.style.display = "none";
 }
 
-function outsideClick(e) {
-  if (e.target == modal) {
-    closeModal();
-  }
-}
+// mouse follow
+document.addEventListener("mousemove", function (e){
+  let x = e.clientX
+  let y = e.clientY
+
+  cursor.style.left = `${x}px`
+  cursor.style.top = `${y}px`
+
+})

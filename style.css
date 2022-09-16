@@ -5,6 +5,8 @@
 html {
   scroll-behavior: smooth;
   scroll-padding-block-start: 80px;
+  width: 100%;
+  /* height: 100%; */
 }
 *::after *::before {
   box-sizing: border-box;
@@ -33,11 +35,13 @@ html {
   --black-color: #e2e8f0;
   --background-color: #1a202c;
   --text-color: #ffffff;
-  --whites-shade: transparent;
+  --whites-shade: rgb(247, 248, 250, 0.2);
   --text-shadow: none;
   --text-background: #343a40;
 }
 body {
+  width: 100%;
+   /* height: 100%; */
   background-color: var(--background-color);
   font-family: "Titillium Web", sans-serif;
   overflow-x: hidden;
@@ -55,16 +59,18 @@ body {
 
   height: 300%;
   left: -50%;
-  opacity: 0.3;
+  opacity: 0.2;
   position: fixed;
   top: -100%;
   width: 300%;
 }
+
 .cursor div {
   position: fixed;
-  z-index: -1;
+  z-index: -2;
   width: 25rem;
   height: 25rem;
+  overflow: hidden;
   pointer-events: none;
 }
 .colorOne {
@@ -76,9 +82,9 @@ body {
     rgba(60, 112, 255, 0) 100%
   );
 }
-.cursor div :nth-child(1) {
-  top: calc(50% - 15rem);
-  left: calc(50% - 15rem);
+.cursor div:nth-child(1) {
+  top: calc(50% + 15rem);
+  left: calc(50% + 15rem);
 }
 @keyframes colorOne {
   0% {
@@ -92,10 +98,15 @@ body {
   }
 }
 .cursor div:nth-child(2) {
-  top: calc(37% - 22rem);
-  left: calc(35% - 22rem);
+  top: calc(37% + 15rem);
+  left: calc(35% + 15rem);
 }
-.colorTwo {
+.colorTwo{
+  animation: colorTwo 4s linear infinite;
+    background-image: -webkit-radial-gradient(50% 50%, circle contain, #762cee, rgba(152, 0, 199, 0) 100%);
+}
+
+@keyframes colorTwo {
   0% {
     transform: rotate(0deg) translate(30px) rotate(0deg) scale(1, 1);
   }
@@ -313,6 +324,12 @@ button {
   color: #1a202c;
 }
 
+main{
+  backdrop-filter: blur(15px);
+  
+  position: relative;
+}
+
 .hero {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -359,6 +376,7 @@ button {
 .hero-text-span {
   color: var(--theme-color);
 }
+
 .hero-left {
   margin-inline-end: auto;
   align-items: center;
@@ -386,6 +404,9 @@ button {
   margin-block-end: 0.5rem;
   font-size: max(14px, 1.5rem);
   line-height: normal;
+}
+.hero-left span svg path{
+  fill: var(--text-color);
 }
 
 h2 {
@@ -570,6 +591,7 @@ input[type="email"] {
   width: 100%;
 }
 .footer {
+  position: relative;
   display: grid;
   place-items: center;
   text-align: center;
@@ -633,6 +655,10 @@ input[type="email"] {
     font-size: 2rem;
     overflow: hidden;
   }
+  /* .cursor div:nth-child(1), .cursor div:nth-child(2) {
+    top: 50vh;
+    left: 50vw;
+  } */
   .more-projects {
     grid-template-columns: 1fr 1fr;
   }
