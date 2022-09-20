@@ -24,26 +24,14 @@
   </head>
   <body>
    
-
-    <div
-      class="cursor"
-      style="
-      position: fixed;
-        translate: none;
-        height: 100%;
-        width: 100%;
-        rotate: none;
-        scale: none;
-        top: 0;
-        right: 0;
-        transform: translate(-50%, -50%);
-        opacity: 0.85;
-      "
-    >
-      <div class="colorOne"></div>
-      <div class="colorTwo"></div>
-      
+<div class="cursor-wrapper">
+    <div class="cursor">
+        <div class="colorOne"></div>
+        <div class="colorTwo"></div>
+        <div class="colorThree"></div>
     </div>
+</div>
+    
     <nav class="nav">
       <div class="logo">
         <img src="images/test-logo-2.jpg" alt="my-logo" />
@@ -634,7 +622,7 @@
     <script src="script.js"></script>
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
-        // AOS.init();
+        AOS.init();
     </script>
   </body>
 </html>

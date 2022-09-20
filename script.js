@@ -88,10 +88,12 @@ function closeModal() {
 
 // mouse follow
 document.addEventListener("mousemove", function (e){
-  let x = e.clientX
+  let x = e.screenX
   let y = e.clientY
+  console.log(x, cursor.style.left)
+  
 
-  cursor.style.left = `${x}px`
-  cursor.style.top = `${y}px`
+  cursor.style.left = `${x - 100}px`
+  cursor.style.top = `${y - 100}px`
 
 })
