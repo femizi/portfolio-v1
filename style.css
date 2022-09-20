@@ -35,7 +35,7 @@ html {
   --black-color: #e2e8f0;
   --background-color: #1a202c;
   --text-color: #ffffff;
-  --whites-shade: rgb(247, 248, 250, 0.2);
+  --whites-shade: rgb(68, 68, 68, 0.8);
   --text-shadow: none;
   --text-background: #343a40;
 }
@@ -507,6 +507,9 @@ strong {
   margin-top: 60px;
   margin-bottom: 20px;
 }
+.contact h2{
+  margin-bottom: 16px;
+}
 .form {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -522,6 +525,7 @@ strong {
   height: 100%;
   margin-top: 20px;
   max-width: auto;
+  color: var(--text-color);
   width: 100%;
 }
 

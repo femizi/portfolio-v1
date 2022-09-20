@@ -6,7 +6,7 @@ const cursor =document.querySelector(`.cursor`)
 const clickDay = document.querySelector(".click-day");
 const clickNight = document.querySelector(".click-night");
 const main = document.querySelector(".main");
-console.log(window.matchMedia)
+
 if(window.matchMedia('(prefers-color-scheme: dark)').matches){
   // Dark
   main.classList.toggle("grain");
@@ -19,7 +19,16 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches){
 } else {
   // Light
 }
+var docWidth = document.documentElement.offsetWidth;
 
+[].forEach.call(
+  document.querySelectorAll('*'),
+  function(el) {
+    if (el.offsetWidth > docWidth) {
+      console.log(el);
+    }
+  }
+);
 function changeImg() {
   clickDay.classList.toggle("hidden");
   clickNight.classList.toggle("hidden");
