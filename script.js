@@ -1,13 +1,13 @@
 // dark-mode handling
 
 const toggleBtn = document.querySelector(".top-tooltip");
-const cursor =document.querySelector(`.cursor`)
+const cursor = document.querySelector(`.cursor`);
 
 const clickDay = document.querySelector(".click-day");
 const clickNight = document.querySelector(".click-night");
 const main = document.querySelector(".main");
 
-if(window.matchMedia('(prefers-color-scheme: dark)').matches){
+if (window.matchMedia("(prefers-color-scheme: dark)").matches) {
   // Dark
   main.classList.toggle("grain");
   document.body.classList.toggle("dark-mode");
@@ -15,20 +15,16 @@ if(window.matchMedia('(prefers-color-scheme: dark)').matches){
     .querySelector('meta[name="theme-color"]')
     .setAttribute("content", "#1a202c");
   changeImg();
-  
 } else {
   // Light
 }
 var docWidth = document.documentElement.offsetWidth;
 
-[].forEach.call(
-  document.querySelectorAll('*'),
-  function(el) {
-    if (el.offsetWidth > docWidth) {
-      console.log(el);
-    }
+[].forEach.call(document.querySelectorAll("*"), function (el) {
+  if (el.offsetWidth > docWidth) {
+    console.log(el);
   }
-);
+});
 function changeImg() {
   clickDay.classList.toggle("hidden");
   clickNight.classList.toggle("hidden");
@@ -72,9 +68,7 @@ toggleBtn1.addEventListener("click", toggle1);
 const modal = document.querySelector(".modal");
 const hamburger = document.querySelector(".hamburger");
 
-
 hamburger.addEventListener("click", openModal);
-
 
 function openModal() {
   hamburger.classList.toggle("active");
@@ -87,13 +81,10 @@ function closeModal() {
 }
 
 // mouse follow
-document.addEventListener("mousemove", function (e){
-  let x = e.screenX
-  let y = e.clientY
-  console.log(x, cursor.style.left)
-  
+document.addEventListener("mousemove", function (e) {
+  let x = e.screenX;
+  let y = e.clientY;
 
-  cursor.style.left = `${x - 100}px`
-  cursor.style.top = `${y - 100}px`
-
-})
+  cursor.style.left = `${x - 100}px`;
+  cursor.style.top = `${y - 100}px`;
+});
