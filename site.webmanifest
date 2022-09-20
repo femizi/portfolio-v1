@@ -1,6 +1,7 @@
 {
   "name": "Femi's Portfolio",
   "short_name": "FP",
+  "description": "Frontend Developer based in Lagos, Nigeria.  Dedicated to building websites that meet buisness needs.",
   "icons": [
     {
       "src": "/android-chrome-192x192.png",
@@ -13,7 +14,8 @@
       "type": "image/png"
     }
   ],
-  "theme_color": "#ffffff",
-  "background_color": "#ffffff",
+  "start_url": "/",
+  "theme_color": "#1ca7d0",
+  "background_color": "#fff",
   "display": "standalone"
 }
