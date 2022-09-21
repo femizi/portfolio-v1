@@ -31,7 +31,7 @@ html {
   --text-background: transparent;
 }
 .dark-mode {
-  --theme-color: #762cee;
+  --theme-color: #147a99;
   --black-color: #e2e8f0;
   --background-color: #1a202c;
   --text-color: #ffffff;
@@ -242,7 +242,7 @@ button {
   background-image: -webkit-radial-gradient(
     50% 50%,
     circle contain,
-    #762cee,
+    #147a99,
     rgba(152, 0, 199, 0) 100%
   );
 }
@@ -251,7 +251,7 @@ button {
   background-image: -webkit-radial-gradient(
     50% 50%,
     circle contain,
-    #900c3fab,
+    #762cee,
     rgba(144, 12, 62, 0) 100%
   );
 }
@@ -408,7 +408,7 @@ main {
   column-gap: 20px;
   padding: 20px 10vw;
   color: var(--black-color);
-  line-height: 70px;
+  line-height: 80px;
   font-size: 40px;
   margin-top: 20px;
 }
